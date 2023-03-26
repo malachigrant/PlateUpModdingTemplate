@@ -64,7 +64,7 @@ namespace KitchenMyMod
       for (int i = 0; i < materials.Length; i++)
       {
         string matName = materials[i];
-        string formatted = $"mgrant - \"{matName}\"";
+        string formatted = GetFormattedName(matName);
         bool flag = CustomMaterials.CustomMaterialsIndex.ContainsKey(formatted);
         if (flag)
         {

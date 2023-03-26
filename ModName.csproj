@@ -19,13 +19,6 @@
 		<!-- Change this if your mod.assets is located elsewhere than the default location -->
 		<AssetBundlePath>$(ProjectDir)content\mod.assets</AssetBundlePath>
 	</PropertyGroup>
-
-	<!-- Steam paths -->
-	<PropertyGroup>
-		<BaseSteamPath>/mnt\c\Program Files (x86)\Steam</BaseSteamPath>
-		<GamePath>$(BaseSteamPath)\steamapps\common\PlateUp\PlateUp</GamePath>
-		<WorkshopPath>$(BaseSteamPath)\steamapps\workshop</WorkshopPath>
-	</PropertyGroup>
 	
 	<!-- Exclude build artifacts and Unity project -->
 	<ItemGroup>
@@ -44,8 +37,7 @@
 	</ItemGroup>
   
 	<ItemGroup>
-		<PackageReference Include="MessagePack.Annotations" Version="2.4.59" />
-		<PackageReference Include="Yariazen.PlateUp.ModBuildUtilities" Version="1.6.16" />
+		<PackageReference Include="Yariazen.PlateUp.ModBuildUtilities" Version="1.7.26" />
 	</ItemGroup>
 
 	<Target Name="BundleWorkshop" AfterTargets="Build" Condition="$(EnableModDeployLocal) == 'true'">
